@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ExploreComponent } from './explore/explore.component';
 
 const routes: Routes = [
-  { path: 'explore', component: ExploreComponent },
-  { path: 'home', component: ExploreComponent },
-  { path: '', redirectTo: 'home' },
+  {
+    path: 'explore',
+    loadChildren: () =>
+      import('./explore/explore.module').then((m) => m.ExploreModule),
+  },
+  { path: '', redirectTo: 'explore', pathMatch: 'full' },
 ];
 
 @NgModule({
