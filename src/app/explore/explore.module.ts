@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ExplorerShellComponent } from './explorer-shell/explorer-shell.component';
+import { ExploreComponent } from './explore.component';
+import { ExploreDashboardComponent } from './explore-dashboard/explore-dashboard.component';
 
 
 
 @NgModule({
-  declarations: [ExplorerShellComponent],
+  declarations: [ ExploreComponent, ExploreDashboardComponent],
   imports: [
     CommonModule
   ]

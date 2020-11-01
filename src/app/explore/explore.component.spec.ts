@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExplorerShellComponent } from './explorer-shell.component';
+import { ExploreComponent } from './explore.component';
 
-describe('ExplorerShellComponent', () => {
-  let component: ExplorerShellComponent;
-  let fixture: ComponentFixture<ExplorerShellComponent>;
+describe('ExploreComponent', () => {
+  let component: ExploreComponent;
+  let fixture: ComponentFixture<ExploreComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExplorerShellComponent ]
+      declarations: [ ExploreComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExplorerShellComponent);
+    fixture = TestBed.createComponent(ExploreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
