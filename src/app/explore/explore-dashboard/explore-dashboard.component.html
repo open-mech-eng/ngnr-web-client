@@ -14,28 +14,71 @@
     </p>
   </div>
   <clr-vertical-nav [clrVerticalNavCollapsible]="true">
-    <a clrVerticalNavLink routerLink="./normal" routerLinkActive="active">
-      <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
-      Normal
-    </a>
-    <a clrVerticalNavLink routerLink="./electric" routerLinkActive="active">
-      <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
+    <clr-vertical-nav-group routerLinkActive="active">
+      <a routerLink="./normal" hidden aria-hidden="true"> </a>
+      <clr-icon shape="user" clrVerticalNavIcon></clr-icon>
+      Views
+      <clr-vertical-nav-group-children *clrIfExpanded="true">
+        <a
+          clrVerticalNavLink
+          routerLink="./normal/pidgey"
+          routerLinkActive="active"
+        >
+          Pidgey
+        </a>
+        <a
+          clrVerticalNavLink
+          routerLink="./normal/snorlax"
+          routerLinkActive="active"
+        >
+          Snorlax
+        </a>
+      </clr-vertical-nav-group-children>
+    </clr-vertical-nav-group>
+    <clr-vertical-nav-group routerLinkActive="active">
+      <a routerLink="./fire" hidden aria-hidden="true"> </a>
+      <clr-icon shape="flame" clrVerticalNavIcon></clr-icon>
+      Analysis
+      <clr-vertical-nav-group-children *clrIfExpanded>
+        <a
+          clrVerticalNavLink
+          routerLink="./fire/charmander"
+          routerLinkActive="active"
+        >
+          Charmander
+        </a>
+        <a
+          clrVerticalNavLink
+          routerLink="./fire/charizard"
+          routerLinkActive="active"
+        >
+          Charizard
+        </a>
+      </clr-vertical-nav-group-children>
+    </clr-vertical-nav-group>
+    <clr-vertical-nav-group routerLinkActive="active">
+      <a routerLink="./electric" hidden aria-hidden="true"> </a>
+      <clr-icon shape="bolt" clrVerticalNavIcon></clr-icon>
       Electric
-    </a>
-    <a clrVerticalNavLink routerLink="./poison" routerLinkActive="active">
-      <clr-icon clrVerticalNavIcon shape="sad-face"></clr-icon>
-      Poison
-    </a>
-    <a clrVerticalNavLink routerLink="./grass" routerLinkActive="active">
-      <clr-icon clrVerticalNavIcon shape="bug"></clr-icon>
-      Grass
-    </a>
-    <a clrVerticalNavLink routerLink="./fighting" routerLinkActive="active">
-      <clr-icon clrVerticalNavIcon shape="shield"></clr-icon>
-      Fighting
-    </a>
-    <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active">
-      <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
+      <clr-vertical-nav-group-children *clrIfExpanded>
+        <a
+          clrVerticalNavLink
+          routerLink="./electric/pikachu"
+          routerLinkActive="active"
+        >
+          Pikachu
+        </a>
+        <a
+          clrVerticalNavLink
+          routerLink="./electric/raichu"
+          routerLinkActive="active"
+        >
+          Raichu
+        </a>
+      </clr-vertical-nav-group-children>
+    </clr-vertical-nav-group>
+    <a clrVerticalNavLink routerLinkActive="active" routerLink="./credit">
+      <clr-icon shape="certificate" clrVerticalNavIcon></clr-icon>
       Credit
     </a>
   </clr-vertical-nav>
